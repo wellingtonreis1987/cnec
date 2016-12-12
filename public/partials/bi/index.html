@@ -1,0 +1,101 @@
+<!-- Navigation Bar-->
+<header id="topnav">
+    <top-bar></top-bar>
+    <menu-navegation></menu-navegation>
+</header>
+<!-- End Navigation Bar-->
+<div class="wrapper">
+    <div class="container">
+        <div ng-show="mensagem.length" class="alert alert-info">
+            {{mensagem}}
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <h4 class="page-title">Pesquisar Usuários</h4>
+            </div>
+        </div>
+
+        <div class="card-box">
+            <div class="row">
+                <div class="col-sm-12">
+                    <form novalidate name="formulario" class="row" ng-submit="pesquisar()">
+                        <fieldset class="form-group">
+                            <div class="col-md-12">
+                                <h4 class="header-title m-t-0 m-b-30">Filtros</h4>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Nome</label>
+                                        <input name="nome" type="text" class="form-control form-control-lg m-b-20"
+                                               ng-model="filtros.nome"
+                                               ng-maxlength="40">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="m-t-15">
+                                    <button type="submit" class="btn btn-primary">
+                                        Pesquisar
+                                    </button>
+                                    <atualizar ng-click="atualizando()"></atualizar>
+                                    <span class="pull-right">
+                                        <a href="/" class="btn btn-info">Voltar</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <span class="input-group-btn">
+                    <div class="btn-group pull-lg-right m-t-15">
+                        <a href="#" class="btn btn-primary">Cadastrar</a>
+                    </div>
+                    <h4 class="page-title">Business Intelligence</h4>
+                </span>
+            </div>
+        </div>
+
+        <div class="card-box">
+            <div class="row">
+                <div class="col-sm-12">
+                    <canvas id="bar" class="chart chart-bar"
+                            chart-data="data" chart-labels="labels" chart-series="series">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-box">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="table-responsive">
+                        <table ng-table="tableParams" class="table table-bordered table-hover table-striped" show-filter="true">
+                            <tr ng-repeat="dado in dados">
+                                <td data-title="'Ano'" filter="{'dado.ano': 'text'}">
+                                    {{dado.ano}}
+                                </td>
+                                <td data-title="'Reprovados'" filter="{'dado.reprovados': 'text'}">
+                                    {{dado.reprovados + "%"}}
+                                </td>
+                                <td data-title="'Aprovados'" filter="{'dados.aprovados': 'text'}">
+                                    {{dado.aprovados + "%"}}
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer text-right">
+            <footer-bar></footer-bar>
+        </footer>
+        <!-- End Footer -->
+    </div>
+</div> <!-- End wrapper -->

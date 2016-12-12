@@ -1,0 +1,27 @@
+<!-- Navigation Bar-->
+<header id="topnav">
+    <top-bar></top-bar>
+    <menu-navegation></menu-navegation>
+</header>
+<!-- End Navigation Bar-->
+<div class="wrapper">
+    <div class="container">
+        <!-- Page-Title -->
+        <div class="row" ng-repeat="p in previlegios">
+            <div class="col-sm-12">
+                <div class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
+                    <div class="card-box tilebox-two">
+                        <a href="{{p.url}}" class="btn btn-sm btn-custom waves-effect waves-light pull-xs-right">Acessar</a>
+                        <h6 class="text-muted text-uppercase m-b-15">{{p.titulo}}</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer text-right">
+            <footer-bar></footer-bar>
+        </footer>
+        <!-- End Footer -->
+    </div>
+</div> <!-- End wrapper -->

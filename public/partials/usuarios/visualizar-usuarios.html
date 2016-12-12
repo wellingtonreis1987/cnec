@@ -1,0 +1,78 @@
+<!-- Navigation Bar-->
+<header id="topnav">
+    <top-bar></top-bar>
+    <menu-navegation></menu-navegation>
+</header>
+<!-- End Navigation Bar-->
+<div class="wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <span class="input-group-btn">
+                    <div class="btn-group pull-lg-right m-t-15">
+                        <a href="/usuarios" class="btn btn-secondary">Voltar</a>
+                    </div>
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h4 class="header-title m-t-0 m-b-30">Dados Pessoais</h4>
+                <div class="card card-block">
+                    <h6 class="card-title">Nome:</h6>
+                    <p class="card-text">{{usuario.dados.nome}}</p>
+
+                    <h6 class="card-title">Telefone:</h6>
+                    <p class="card-text">{{usuario.dados.telefone | telefone}}</p>
+
+                    <h6 class="card-title">Endereço:</h6>
+                    <p class="card-text">{{usuario.dados.endereco}}</p>
+
+                    <h6 class="card-title">UF:</h6>
+                    <p class="card-text">{{usuario.dados.uf | uppercase}}</p>
+
+                    <h6 class="card-title">Data de Nascimento:</h6>
+                    <p class="card-text">{{usuario.dados.nascimento | date : 'dd/MM/yyyy'}}</p>
+
+                    <h6 class="card-title">CPF:</h6>
+                    <p class="card-text">{{usuario.dados.cpf | cpf}}</p>
+
+                    <h6 class="card-title">E-mail:</h6>
+                    <p class="card-text">{{usuario.dados.email}}</p>
+
+                    <h6 class="card-title">CEP:</h6>
+                    <p class="card-text">{{usuario.dados.cep | cep}}</p>
+
+                    <h6 class="card-title">Sexo:</h6>
+                    <p class="card-text">{{usuario.dados.sexo | sexo}}</p>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <h4 class="header-title m-t-0 m-b-30">Dados da Empresa</h4>
+                <div class="card card-block">
+                    <h6 class="card-title">Nome Fantasia:</h6>
+                    <p class="card-text">{{usuario.empresa.nome}}</p>
+
+                    <h6 class="card-title">Telefone:</h6>
+                    <p class="card-text">{{usuario.empresa.telefone | telefone}}</p>
+
+                    <h6 class="card-title">Endereço:</h6>
+                    <p class="card-text">{{usuario.empresa.endereco}}</p>
+
+                    <h6 class="card-title">UF:</h6>
+                    <p class="card-text">{{usuario.empresa.uf | uppercase}}</p>
+
+                    <h6 class="card-title">CNPJ:</h6>
+                    <p class="card-text">{{usuario.empresa.cnpj | cnpj}}</p>
+
+                    <h6 class="card-title">CEP:</h6>
+                    <p class="card-text">{{usuario.empresa.cep | cep}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer text-right">
+        <footer-bar></footer-bar>
+    </footer>
+</div>
